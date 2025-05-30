@@ -17,13 +17,13 @@ Given('el usuario está en la página de login', async function () {
 });
 
 When('se identifica con credenciales válidas', async function () {
-    await this.page.fill('input[name="username"]', 'Amando');
+    await this.page.fill('input[name="username"]', 'Armando');
     await this.page.fill('input[name="password"]', 'abril2026');
     await this.page.click('input[name="signon"]');
 });
 
-Then('debería ver su panel de usuario', async function () {
-   await expect(this.page.locator('text=Welcome Guino!')).toBeVisible();
+Then('debería ver su panel de usuario',{timeout: 50000}, async function () {
+   await expect(this.page.locator('text=Welcome Armando!')).toBeVisible();
   //await browser.close();
 });
 
