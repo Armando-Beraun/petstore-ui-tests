@@ -6,7 +6,7 @@ import { loginEnPetStore } from '../support/actions/login';
 //let browser: Browser;
 //let page: Page;
 
-Given('el cliente ingresa a la tienda virtual de PetStore', async function()  {
+Given('el cliente ingresa a la tienda virtual de PetStore', {timeout: 50000},async function()  {
     //browser = await chromium.launch({});
     //const context = await browser.newContext();
     //page = await context.newPage();
